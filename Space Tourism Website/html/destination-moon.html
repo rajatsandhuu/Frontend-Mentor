@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/destination.css" />
+    <title>Space Tourism Website</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          src="../assets/shared/logo.svg"
+          class="main-logo"
+          alt="Main Logo"
+        />
+        <div class="nav-links">
+          <ul>
+            <li>
+              <a href="../index.html"
+                ><span class="sr-no sr-no-00">00</span>Home</a
+              >
+            </li>
+            <li>
+              <a href="./destination-moon.html" class="active"
+                ><span class="sr-no sr-no-01">01</span>Destination</a
+              >
+            </li>
+            <li>
+              <a href="./crew-commander.html"
+                ><span class="sr-no sr-no-02">02</span>Crew</a
+              >
+            </li>
+            <li>
+              <a href="./technology-vehicle.html"
+                ><span class="sr-no sr-no-03">03</span>Technology</a
+              >
+            </li>
+          </ul>
+        </div>
+        <img
+          src="../assets/shared/icon-hamburger.svg"
+          id="hamburger-menu"
+          alt="Hamburger Menu"
+        />
+      </nav>
+    </header>
+    <main>
+      <div class="main-content">
+        <div class="flex-item-1">
+          <p class="pick-destination"><span>01</span>Pick your destination</p>
+          <img
+            src="../assets/destination/image-moon.png"
+            class="main-img"
+            alt="Moon"
+          />
+        </div>
+        <div class="flex-item-2">
+          <div class="destination-links">
+            <a
+              href="./destination-moon.html"
+              class="moon-link active-destination-link"
+              >Moon</a
+            >
+            <a href="./destination-mars.html" class="mars-link">Mars</a>
+            <a href="./destination-europa.html" class="europa-link">Europa</a>
+            <a href="./destination-titan.html" class="titan-link">Titan</a>
+          </div>
+          <h1 class="main-title">MOON</h1>
+          <p class="main-desc">
+            See our planet as you’ve never seen it before. A perfect relaxing
+            trip away to help regain perspective and come back refreshed. While
+            you’re there, take in some history by visiting the Luna 2 and Apollo
+            11 landing sites.
+          </p>
+          <div class="info">
+            <div class="avg-distance-div">
+              <p class="avg-distance">Avg. distance</p>
+              <p class="avg-distance-val">384,400 km</p>
+            </div>
+            <div class="est-travel-time-div">
+              <p class="est-travel-time">Est. travel time</p>
+              <p class="est-travel-time-val">3 days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/destination.js"></script>
+  </body>
+</html>

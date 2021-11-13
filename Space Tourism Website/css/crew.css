@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background: url(../assets/crew/background-crew-mobile.jpg) no-repeat center
+    center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+}
+.main-logo {
+  width: 2.5rem;
+}
+main {
+  text-align: center;
+}
+.crew-member {
+  width: 11.07rem;
+  margin-bottom: 1.5rem;
+}
+.meet-your-crew {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.296875rem;
+  margin-bottom: 2rem;
+}
+.meet-your-crew span {
+  color: rgba(255, 255, 255, 0.25);
+  margin-right: 0.8rem;
+}
+.crew-nav-links {
+  position: relative;
+  width: 50%;
+  height: 0.625rem;
+  margin: 0 auto;
+}
+.crew-nav-links::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: rgba(255, 255, 255, 0.25);
+  height: 1px;
+  width: 20.4375rem;
+  bottom: 2.3rem;
+  left: -4.4rem;
+}
+.crew-nav-links div {
+  cursor: pointer;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.17);
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+}
+.crew-nav-links div:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.crew-nav-links div:not(:last-child) {
+  margin-right: 0.75rem;
+}
+.crew-title {
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+.crew-member-name {
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Bellefair", serif;
+}
+.crew-desc {
+  position: relative;
+  font-family: "Barlow", sans-serif;
+  color: #d0d6f9;
+  margin: 0.5rem 2rem 0 2rem;
+  line-height: 1.5rem;
+  font-size: 0.9375rem;
+}
+.crew-link-active {
+  background: #fff !important;
+}
+#hamburger-menu {
+  cursor: pointer;
+  z-index: 99;
+}
+.nav-links {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  backdrop-filter: blur(20px);
+  height: 100vh;
+  width: 67.733333333%;
+  padding: 8rem 0 0 0;
+}
+.nav-links ul {
+  list-style: none;
+  margin-left: 2rem;
+}
+.nav-links ul li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.nav-links ul li a {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.296875rem;
+}
+.sr-no {
+  font-weight: 700;
+}
+.sr-no-00,
+.sr-no-02 {
+  margin-right: 0.7rem;
+}
+.sr-no-01 {
+  margin-right: 0.8rem;
+}
+.sr-no-03 {
+  margin-right: 0.7rem;
+}
+
+@media (min-width: 768px) {
+  html {
+    background: url(../assets/crew/background-crew-tablet.jpg) no-repeat center
+      center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  #hamburger-menu {
+    display: none;
+  }
+  .crew-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .crew-flex-item-2 {
+    margin-top: 2rem;
+    order: 4;
+  }
+  .meet-your-crew {
+    font-size: 1.25rem;
+    text-align: left;
+    margin-left: 3.3rem;
+    margin-top: 2rem;
+  }
+  .crew-title {
+    font-size: 1.5rem;
+  }
+  .crew-member-name {
+    font-size: 2.5rem;
+  }
+  .crew-desc {
+    margin: 0.5rem 10rem 0 10rem;
+    font-size: 1rem;
+  }
+  .crew-member {
+    order: 5;
+    width: 33.719375rem;
+    margin-top: 2.5rem;
+    overflow: visible;
+  }
+  .crew-nav-links::before {
+    content: "";
+    display: none;
+  }
+  .nav-links {
+    display: block;
+    position: fixed;
+    height: auto;
+    width: auto;
+    padding: 2rem;
+  }
+  .nav-links ul {
+    list-style: none;
+    margin: 0;
+  }
+  .nav-links ul li:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 1.5rem;
+  }
+  .nav-links ul li {
+    display: inline-block;
+  }
+  .nav-links ul li a span {
+    display: none;
+  }
+  .nav-links ul li a {
+    position: relative;
+  }
+  .nav-links ul li a:hover:not(.active)::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width: 76.59574468%;
+    height: 0.1875rem;
+    left: 0;
+    bottom: -2rem;
+  }
+  .active {
+    position: relative;
+    color: #fff !important;
+  }
+  .active::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 76.59574468%;
+    height: 0.1875rem;
+    left: 0;
+    bottom: -2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  html {
+    background: url(../assets/crew/background-crew-desktop.jpg) no-repeat center
+      center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  body {
+    overflow: visible;
+  }
+  #hamburger-menu {
+    display: none;
+  }
+  main {
+    text-align: left;
+    padding-bottom: 5rem;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0 0 3rem;
+  }
+  .meet-your-crew {
+    font-size: 1.75rem;
+    text-align: left;
+    margin-top: 2rem;
+    margin-left: 11.5%;
+  }
+  .crew-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .flex-left-side {
+    display: flex;
+    flex-direction: column;
+    margin-left: 11.5%;
+    width: 40.5%;
+  }
+  .crew-title {
+    font-size: 2rem;
+  }
+  .crew-member {
+    position: absolute;
+    width: 23rem;
+    overflow: visible;
+    margin: 0;
+    top: 24.4%;
+    right: 18%;
+  }
+  .crew-member-name {
+    font-size: 3.5rem;
+  }
+  .crew-desc {
+    margin: 0 10rem 0 0;
+    font-size: 1.125rem;
+  }
+  .crew-nav-links {
+    margin: 5rem 0 0 0;
+  }
+  .nav-links {
+    position: relative;
+    height: auto;
+    width: 60%;
+    padding: 2rem 7.5rem 2rem 7.5rem;
+  }
+  .nav-links::before {
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: 0.0625rem;
+    background: rgba(255, 255, 255, 0.25);
+    top: 50%;
+    left: -52.5%;
+  }
+  .nav-links ul {
+    list-style: none;
+    margin: 0;
+  }
+  .nav-links ul li a span {
+    display: inline-block;
+  }
+}
