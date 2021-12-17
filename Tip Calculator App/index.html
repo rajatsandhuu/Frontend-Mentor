@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip Calculator App</title>
+  </head>
+  <body>
+    <img src="images/logo.svg" alt="Splitter" class="main-logo" />
+    <div class="container">
+      <div class="container-flex-item bill-container">
+        <div class="sub-heading">Bill</div>
+        <input type="text" name="bill" id="bill-amt" placeholder="0" />
+      </div>
+      <div class="container-flex-item select-tip-container">
+        <div class="sub-heading">Select Tip %</div>
+        <div class="grid">
+          <div class="grid-item tip-5" data-value="5">5%</div>
+          <div class="grid-item tip-10" data-value="10">10%</div>
+          <div class="grid-item tip-15" data-value="15">15%</div>
+          <div class="grid-item tip-25" data-value="25">25%</div>
+          <div class="grid-item tip-50" data-value="50">50%</div>
+          <input type="text" placeholder="Custom" id="custom-tip" />
+        </div>
+      </div>
+      <div class="container-flex-item people-container">
+        <div class="sub-heading">Number of People</div>
+        <input type="text" name="people" id="person-amt" placeholder="0" />
+      </div>
+      <div class="container-flex-item tip-container">
+        <div class="tip-flex-1">
+          <div class="tip-amt-container">
+            <div>
+              <span class="tip-amt-text">Tip Amount</span
+              ><span class="per-person">/ person</span>
+            </div>
+            <div class="person-tip-amt">$0.00</div>
+          </div>
+          <div class="total-tip-container">
+            <div>
+              <span class="total-text">Total</span
+              ><span class="per-person">/ person</span>
+            </div>
+            <div class="total-tip-amt">$0.00</div>
+          </div>
+        </div>
+        <div class="tip-flex-2">
+          <button type="button" id="reset" disabled>Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

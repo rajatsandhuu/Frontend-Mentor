@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --cyan: hsl(172, 67%, 45%);
+  --cyanHover: rgba(159, 232, 223);
+  --darkCyan: hsl(183, 100%, 15%);
+  --darkGreyCyanOne: hsl(186, 14%, 43%);
+  --darkGreyCyanTwo: hsl(184, 14%, 56%);
+  --lightGreyCyanOne: hsl(185, 41%, 84%);
+  --lightGreyCyanTwo: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --inputsFontSize: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--lightGreyCyanOne);
+  font-family: "Space Mono", monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: var(--white);
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.container-flex-item {
+  width: 100%;
+}
+
+.container-flex-item:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.main-logo {
+  display: block;
+  margin: 2.5rem auto 0 auto;
+}
+
+.sub-heading {
+  margin-bottom: 1rem;
+  color: var(--darkGreyCyanTwo);
+  font-weight: 700;
+}
+
+input {
+  font-size: var(--inputsFontSize);
+  font-family: "Space Mono", monospace;
+  display: block;
+  padding: 0.5rem;
+  direction: rtl;
+  border: none;
+  color: var(--darkCyan);
+  font-weight: 700;
+  width: 100%;
+}
+
+input:focus {
+  outline-color: var(--cyan);
+}
+
+#bill-amt {
+  background: url(images/icon-dollar.svg) no-repeat scroll,
+    var(--lightGreyCyanTwo);
+  background-position-x: 1.5rem;
+  background-position-y: center;
+  padding-left: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.grid-item {
+  padding: 0.25rem 0 0.25rem 0;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: var(--inputsFontSize);
+  background: var(--darkCyan);
+  color: var(--white);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.grid-item:hover:not(.grid-item-active) {
+  background: var(--cyanHover);
+  color: var(--darkCyan);
+}
+
+#custom-tip {
+  background: var(--lightGreyCyanTwo);
+  font-family: "Space Mono", monospace;
+  direction: rtl;
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+}
+
+.grid-item-active {
+  background: var(--cyan);
+  color: var(--darkCyan);
+}
+
+#person-amt {
+  background: url(images/icon-person.svg) no-repeat scroll,
+    var(--lightGreyCyanTwo);
+  background-position-x: 1.5rem;
+  background-position-y: center;
+  padding-left: 3rem;
+}
+
+.per-person {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--darkGreyCyanTwo);
+  font-weight: 700;
+}
+
+.tip-container {
+  background: var(--darkCyan);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.tip-amt-container,
+.total-tip-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-tip-container {
+  margin-top: 1.5rem;
+}
+
+.person-tip-amt,
+.total-tip-amt {
+  color: var(--cyan);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.tip-amt-text,
+.total-text {
+  color: var(--white);
+  font-weight: 700;
+}
+
+#reset {
+  margin-top: 2rem;
+  width: 100%;
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  cursor: pointer;
+  background: var(--cyan);
+  border: none;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  color: var(--darkCyan);
+  font-weight: 700;
+  opacity: 0.25;
+}
+
+#reset:hover {
+  background: var(--cyanHover);
+}
+
+#reset:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+#reset:hover:disabled {
+  background: var(--cyan);
+}
+
+@media (min-width: 1440px) {
+  .main-logo {
+    display: block;
+    margin: 5rem auto 0 auto;
+  }
+
+  .container {
+    margin: 5rem 20rem 2.3rem 20rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    border-radius: 1.25rem;
+  }
+
+  .tip-container {
+    grid-row: 1 / span 3;
+    grid-column: 2 / 3;
+    height: 100%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .container-flex-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .select-tip-container,
+  .people-container {
+    margin-top: 2.5rem;
+  }
+
+  #reset {
+    margin: 0;
+  }
+
+  .tip-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .total-tip-container {
+    margin-top: 3rem;
+  }
+
+  .person-tip-amt,
+  .total-tip-amt {
+    font-size: 2.5rem;
+  }
+
+  .tip-amt-container,
+  .total-tip-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
