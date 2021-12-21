@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+:root {
+  /* Theme One Backgrounds */
+  --themeMainBg: hsl(222, 26%, 31%);
+  --themeKeypadToggle: hsl(223, 31%, 20%);
+  --themeScreen: hsl(224, 36%, 15%);
+
+  /* Theme One Key Colours */
+  --themeDelReset: hsl(225, 21%, 49%);
+  --themeDelResetShadow: hsl(224, 28%, 35%);
+  --themeEqualTo: hsl(6, 63%, 50%);
+  --themeEqualToShadow: hsl(6, 70%, 34%);
+  --themeMainKeys: hsl(30, 25%, 89%);
+  --themeMainKeysShadow: hsl(28, 16%, 65%);
+
+  /* Theme One Text Colours */
+  --themeMainText: hsl(221, 14%, 31%);
+  --themeEqualToText: rgb(255, 255, 255);
+  --headerText: rgb(255, 255, 255);
+  --previousOperand: rgba(255, 255, 255, 0.5);
+
+  --keyFontSize: 2rem;
+}
+
+[data-theme="theme-two"] {
+  /* Theme Two Backgrounds */
+  --themeMainBg: hsl(0, 0%, 90%);
+  --themeKeypadToggle: hsl(0, 5%, 81%);
+  --themeScreen: hsl(0, 0%, 93%);
+
+  /* Theme Two Key Colours */
+  --themeDelReset: hsl(185, 42%, 37%);
+  --themeDelResetShadow: hsl(185, 58%, 25%);
+  --themeEqualTo: hsl(25, 98%, 40%);
+  --themeEqualToShadow: hsl(25, 99%, 27%);
+  --themeMainKeys: hsl(45, 7%, 89%);
+  --themeMainKeysShadow: hsl(35, 11%, 61%);
+
+  /* Theme Two Text Colours */
+  --themeMainText: hsl(60, 10%, 19%);
+  --themeEqualToText: rgb(255, 255, 255);
+  --headerText: hsl(0, 0%, 0%);
+  --previousOperand: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="theme-three"] {
+  /* Theme Three Backgrounds */
+  --themeMainBg: hsl(268, 75%, 9%);
+  --themeKeypadToggle: hsl(268, 71%, 12%);
+  --themeScreen: hsl(268, 71%, 12%);
+
+  /* Theme Three Key Colours */
+  --themeDelReset: hsl(281, 89%, 26%);
+  --themeDelResetShadow: hsl(285, 91%, 52%);
+  --themeEqualTo: hsl(176, 100%, 44%);
+  --themeEqualToShadow: hsl(177, 92%, 70%);
+  --themeMainKeys: hsl(268, 47%, 21%);
+  --themeMainKeysShadow: hsl(290, 70%, 36%);
+
+  /* Theme Three Text Colours */
+  --themeMainText: hsl(52, 100%, 62%);
+  --themeEqualToText: hsl(198, 20%, 13%);
+  --headerText: hsl(52, 100%, 62%);
+  --previousOperand: rgb(255, 229, 61, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--themeMainBg);
+  font-family: "Spartan", sans-serif;
+  color: var(--headerText);
+  font-size: 0.9rem;
+  transition: all 0.5s ease;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+.header {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme::before {
+  content: " 1\00a0\00a0\00a0\00a0 2\00a0\00a0\00a0\00a0 3";
+  position: absolute;
+  display: block;
+  top: -1.3rem;
+  left: 59%;
+}
+
+.toggler {
+  position: relative;
+  background: var(--themeKeypadToggle);
+  width: 4.5rem;
+  height: 1.55rem;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+.theme-text {
+  text-transform: uppercase;
+  margin-right: 1.6rem;
+}
+
+.circle {
+  cursor: pointer;
+  position: absolute;
+  background-color: var(--themeEqualTo);
+  border-radius: 50%;
+  border: none;
+  width: 1rem;
+  height: 1rem;
+  top: 18%;
+  left: 6%;
+  transform: translateX(0px);
+  transition: all 0.5s ease;
+}
+
+.theme-2 {
+  transform: translateX(24px);
+}
+
+.theme-3 {
+  transform: translateX(48px);
+}
+
+.theme-1,
+.theme-2,
+.theme-3 {
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+  border: none;
+  width: 0.9rem;
+  height: 0.9rem;
+  top: 20%;
+  left: 6%;
+}
+
+.main-screen {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  min-height: 7.5rem;
+  background-color: var(--themeScreen);
+  margin: 0 2rem 2rem 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  transition: all 0.5s ease;
+  gap: 0.5rem;
+  word-break: break-all;
+}
+
+.previous-operand {
+  font-size: 1rem;
+  color: var(--previousOperand);
+}
+
+.keypad-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 2rem 2rem 2rem;
+  background: var(--themeKeypadToggle);
+  padding: 2rem;
+  border-radius: 10px;
+  gap: 1rem;
+  transition: all 0.5s ease;
+}
+
+.keypad-grid button {
+  font-family: "Spartan", sans-serif;
+  cursor: pointer;
+  font-size: var(--keyFontSize);
+  background: var(--themeMainKeys);
+  color: var(--themeMainText);
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  box-shadow: 0 5px 0 0 var(--themeMainKeysShadow);
+  transition: all 0.1s ease;
+}
+
+.keypad-grid button:active {
+  box-shadow: 0px 0px;
+  transform: translateY(5px);
+}
+
+#delete-btn,
+#reset-btn {
+  background-color: var(--themeDelReset);
+  color: rgb(255, 255, 255);
+  font-size: 1.25rem;
+  box-shadow: 0 5px 0 0 var(--themeDelResetShadow);
+  transition: all 0.1s ease;
+}
+
+#reset-btn {
+  grid-column: 1 / span 2;
+}
+
+#equal-to-btn {
+  background-color: var(--themeEqualTo);
+  color: var(--themeEqualToText);
+  font-size: 1.25rem;
+  grid-column: 3 / span 2;
+  box-shadow: 0 5px 0 0 var(--themeEqualToShadow);
+  transition: all 0.1s ease;
+}
+
+#delete-btn:active,
+#reset-btn:active,
+#equal-to-btn:active {
+  box-shadow: 0px 0px;
+  transform: translateY(5px);
+}
+
+@media (min-width: 1440px) {
+  .calculator {
+    margin: 3.5rem 27.5rem 3.5rem 27.5rem;
+  }
+
+  .keypad-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .keypad-grid button {
+    padding: 0.75rem;
+    font-size: 2.25rem;
+  }
+
+  .main-screen {
+    min-height: 8.5rem;
+    font-size: 3rem;
+  }
+}
