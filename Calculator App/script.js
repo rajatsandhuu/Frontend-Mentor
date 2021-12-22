@@ -42,7 +42,7 @@ for (let i = 0; i < gridButtons.length; i++) {
             !currentOperand.textContent.includes(".") &&
             !currentOperand.textContent.includes("+") &&
             !currentOperand.textContent.includes("-") &&
-            !currentOperand.textContent.includes("*") &&
+            !currentOperand.textContent.includes("x") &&
             !currentOperand.textContent.includes("/")
           ) {
             currentOperand.textContent = parseFloat(
@@ -56,7 +56,7 @@ for (let i = 0; i < gridButtons.length; i++) {
           !currentOperand.textContent.includes(".") &&
           !currentOperand.textContent.includes("+") &&
           !currentOperand.textContent.includes("-") &&
-          !currentOperand.textContent.includes("*") &&
+          !currentOperand.textContent.includes("x") &&
           !currentOperand.textContent.includes("/")
         ) {
           currentOperand.textContent = parseFloat(
@@ -76,11 +76,39 @@ for (let i = 0; i < gridButtons.length; i++) {
         firstOperand = parseFloat(
           currentOperand.textContent.replace(regex, "")
         );
-        console.log(firstOperand);
-        previousOperand.textContent = currentOperand.textContent;
+        if (previousOperand.textContent !== "") {
+          if (previousOperand.textContent.indexOf("+") > -1) {
+            previousOperand.textContent = (
+              parseFloat(previousOperand.textContent.replace(/[^0-9.-]/g, "")) +
+              parseFloat(currentOperand.textContent.replace(regex, ""))
+            ).toLocaleString();
+            previousOperand.textContent += operator;
+          } else if (previousOperand.textContent.indexOf("-") > -1) {
+            previousOperand.textContent = (
+              parseFloat(previousOperand.textContent.replace(/[^0-9.-]/g, "")) -
+              parseFloat(currentOperand.textContent.replace(regex, ""))
+            ).toLocaleString();
+            previousOperand.textContent += operator;
+          } else if (previousOperand.textContent.indexOf("x") > -1) {
+            previousOperand.textContent = (
+              parseFloat(previousOperand.textContent.replace(/[^0-9.-]/g, "")) *
+              parseFloat(currentOperand.textContent.replace(regex, ""))
+            ).toLocaleString();
+            previousOperand.textContent += operator;
+          } else if (previousOperand.textContent.indexOf("/") > -1) {
+            previousOperand.textContent = (
+              parseFloat(previousOperand.textContent.replace(/[^0-9.-]/g, "")) /
+              parseFloat(currentOperand.textContent.replace(regex, ""))
+            ).toLocaleString();
+            previousOperand.textContent += operator;
+          }
+        } else {
+          previousOperand.textContent = currentOperand.textContent;
+        }
         currentOperand.textContent = "";
       } else if (currentOperand.innerHTML.trim().length === 1) {
         if (
+          gridButtons[i].textContent === "+" ||
           gridButtons[i].textContent === "x" ||
           gridButtons[i].textContent === "/"
         ) {
@@ -110,9 +138,10 @@ resetButton.addEventListener("click", function () {
 });
 
 equalToButton.addEventListener("click", function () {
+  const tempFirst = previousOperand.textContent.replace(regex, "");
+  firstOperand = parseFloat(tempFirst.slice(0, -1));
   previousOperand.textContent = "";
   secondOperand = parseFloat(currentOperand.textContent.replace(regex, ""));
-  console.log(secondOperand);
   switch (operator) {
     case "+":
       finalResult = firstOperand + secondOperand;
