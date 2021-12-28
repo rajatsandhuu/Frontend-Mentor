@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>E-commerce Product Page</title>
+  </head>
+  <body onload="javascript:run()">
+    <header>
+      <nav>
+        <div class="left-side">
+          <div class="hamburger-menu">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+          </div>
+          <img src="images/logo.svg" class="main-logo" alt="Main Logo" />
+          <div class="nav-links">
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div class="right-side">
+          <div class="cart-image"><span class="cart-quantity">1</span></div>
+          <img
+            src="images/image-avatar.png"
+            class="profile-photo"
+            alt="Profile Photo"
+          />
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="cart-container" style="display: none">
+        <h4 class="cart-title">Cart</h4>
+        <p class="cart-is-empty">Your cart is empty.</p>
+        <div class="cart-with-checkout">
+          <div class="cart-product">
+            <div class="product-desc">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                class="product-thumbnail"
+                alt="Product Image"
+              />
+              <p>
+                Autumn Limited Edition..<br />
+                $125.00 x
+                <span class="product-quantity">1</span>
+                <span class="total-price">$125.00</span>
+              </p>
+            </div>
+            <div class="delete-icon"></div>
+          </div>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+      <div class="product-main-container">
+        <div class="product-image-container">
+          <div class="previous-symbol"></div>
+          <img
+            src="images/image-product-1.jpg"
+            id="product-img"
+            alt="Product Image"
+          />
+          <div class="next-symbol"></div>
+          <div class="thumbnails">
+            <div class="thumbnail-1 active">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                alt="Product Thumbnail 1"
+              />
+            </div>
+            <div class="thumbnail-2">
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                alt="Product Thumbnail 2"
+              />
+            </div>
+            <div class="thumbnail-3">
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                alt="Product Thumbnail 3"
+              />
+            </div>
+            <div class="thumbnail-4">
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                alt="Product Thumbnail 4"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="lightbox">
+          <div class="close-lightbox"></div>
+          <div class="previous-symbol"></div>
+          <img
+            src="images/image-product-1.jpg"
+            id="lightbox-product-img"
+            alt="Product Image"
+          />
+          <div class="next-symbol"></div>
+          <div class="lightbox-thumbnails">
+            <div class="lightbox-thumbnail-1 lightbox-active">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                alt="Product Thumbnail 1"
+              />
+            </div>
+            <div class="lightbox-thumbnail-2">
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                alt="Product Thumbnail 2"
+              />
+            </div>
+            <div class="lightbox-thumbnail-3">
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                alt="Product Thumbnail 3"
+              />
+            </div>
+            <div class="lightbox-thumbnail-4">
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                alt="Product Thumbnail 4"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="product-text">
+          <h4>Sneaker Company</h4>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>
+            These low profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <div class="product-prices">
+            <div class="discount-price-container">
+              <div class="discount-price">$125.00</div>
+              <div class="discount">50%</div>
+            </div>
+            <div class="original-price">$250.00</div>
+          </div>
+          <div class="buttons-container">
+            <div class="quantity-container">
+              <div class="minus"></div>
+              <div class="quantity">1</div>
+              <div class="plus"></div>
+            </div>
+            <button class="add-to-cart-btn">
+              <span class="cart-icon"></span>
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
