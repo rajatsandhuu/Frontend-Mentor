@@ -622,7 +622,7 @@ nav {
     margin-bottom: 1.5rem;
   }
 
-  .previous-symbol {
+  .product-image-container .previous-symbol {
     display: none;
     cursor: pointer;
     position: absolute;
@@ -635,7 +635,7 @@ nav {
     top: 42.5%;
   }
 
-  .next-symbol {
+  .product-image-container .next-symbol {
     display: none;
     cursor: pointer;
     position: absolute;

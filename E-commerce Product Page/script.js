@@ -119,153 +119,163 @@ deleteIcon.addEventListener("click", function () {
   document.querySelector(".cart-with-checkout").style.display = "none";
 });
 
-function run() {
-  const mediaQuery = window.matchMedia("(min-width: 1200px)");
-  var enableLightbox = function () {
+function checkScreenSize() {
+  return window.innerWidth > 1200;
+}
+
+var enableLightbox = function () {
+  if (checkScreenSize()) {
     document.body.classList.add("overlay");
     document.querySelector(".lightbox").style.display = "block";
     document.querySelector(".lightbox").style.position = "absolute";
-  };
-  function onMediaQueryChange() {
-    if (mediaQuery.matches) {
-      productImage.addEventListener("click", enableLightbox);
+  }
+};
 
-      thumbnailOne.addEventListener("click", function () {
-        thumbnailOne.classList.add("active");
-        thumbnailTwo.classList.remove("active");
-        thumbnailThree.classList.remove("active");
-        thumbnailFour.classList.remove("active");
-        productImage.src = "images/image-product-1.jpg";
-      });
+productImage.addEventListener("click", enableLightbox);
 
-      thumbnailTwo.addEventListener("click", function () {
-        thumbnailOne.classList.remove("active");
-        thumbnailTwo.classList.add("active");
-        thumbnailThree.classList.remove("active");
-        thumbnailFour.classList.remove("active");
-        productImage.src = "images/image-product-2.jpg";
-      });
+thumbnailOne.addEventListener("click", function () {
+  if (checkScreenSize()) {
+    thumbnailOne.classList.add("active");
+    thumbnailTwo.classList.remove("active");
+    thumbnailThree.classList.remove("active");
+    thumbnailFour.classList.remove("active");
+    productImage.src = "images/image-product-1.jpg";
+  }
+});
 
-      thumbnailThree.addEventListener("click", function () {
-        thumbnailOne.classList.remove("active");
-        thumbnailTwo.classList.remove("active");
-        thumbnailThree.classList.add("active");
-        thumbnailFour.classList.remove("active");
-        productImage.src = "images/image-product-3.jpg";
-      });
+thumbnailTwo.addEventListener("click", function () {
+  if (checkScreenSize()) {
+    thumbnailOne.classList.remove("active");
+    thumbnailTwo.classList.add("active");
+    thumbnailThree.classList.remove("active");
+    thumbnailFour.classList.remove("active");
+    productImage.src = "images/image-product-2.jpg";
+  }
+});
 
-      thumbnailFour.addEventListener("click", function () {
-        thumbnailOne.classList.remove("active");
-        thumbnailTwo.classList.remove("active");
-        thumbnailThree.classList.remove("active");
-        thumbnailFour.classList.add("active");
-        productImage.src = "images/image-product-4.jpg";
-      });
+thumbnailThree.addEventListener("click", function () {
+  if (checkScreenSize()) {
+    thumbnailOne.classList.remove("active");
+    thumbnailTwo.classList.remove("active");
+    thumbnailThree.classList.add("active");
+    thumbnailFour.classList.remove("active");
+    productImage.src = "images/image-product-3.jpg";
+  }
+});
 
-      lightboxThumbnailOne.addEventListener("click", function () {
-        lightboxThumbnailOne.classList.add("lightbox-active");
-        lightboxThumbnailTwo.classList.remove("lightbox-active");
-        lightboxThumbnailThree.classList.remove("lightbox-active");
-        lightboxThumbnailFour.classList.remove("lightbox-active");
-        lightboxProductImage.src = "images/image-product-1.jpg";
-      });
+thumbnailFour.addEventListener("click", function () {
+  if (checkScreenSize()) {
+    thumbnailOne.classList.remove("active");
+    thumbnailTwo.classList.remove("active");
+    thumbnailThree.classList.remove("active");
+    thumbnailFour.classList.add("active");
+    productImage.src = "images/image-product-4.jpg";
+  }
+});
 
-      lightboxThumbnailTwo.addEventListener("click", function () {
-        lightboxThumbnailOne.classList.remove("lightbox-active");
-        lightboxThumbnailTwo.classList.add("lightbox-active");
-        lightboxThumbnailThree.classList.remove("lightbox-active");
-        lightboxThumbnailFour.classList.remove("lightbox-active");
-        lightboxProductImage.src = "images/image-product-2.jpg";
-      });
+lightboxThumbnailOne.addEventListener("click", function () {
+  if (checkScreenSize()) {
+    lightboxThumbnailOne.classList.add("lightbox-active");
+    lightboxThumbnailTwo.classList.remove("lightbox-active");
+    lightboxThumbnailThree.classList.remove("lightbox-active");
+    lightboxThumbnailFour.classList.remove("lightbox-active");
+    lightboxProductImage.src = "images/image-product-1.jpg";
+  }
+});
 
-      lightboxThumbnailThree.addEventListener("click", function () {
-        lightboxThumbnailOne.classList.remove("lightbox-active");
-        lightboxThumbnailTwo.classList.remove("lightbox-active");
-        lightboxThumbnailThree.classList.add("lightbox-active");
-        lightboxThumbnailFour.classList.remove("lightbox-active");
-        lightboxProductImage.src = "images/image-product-3.jpg";
-      });
+lightboxThumbnailTwo.addEventListener("click", function () {
+  if (checkScreenSize()) {
+    lightboxThumbnailOne.classList.remove("lightbox-active");
+    lightboxThumbnailTwo.classList.add("lightbox-active");
+    lightboxThumbnailThree.classList.remove("lightbox-active");
+    lightboxThumbnailFour.classList.remove("lightbox-active");
+    lightboxProductImage.src = "images/image-product-2.jpg";
+  }
+});
 
-      lightboxThumbnailFour.addEventListener("click", function () {
-        lightboxThumbnailOne.classList.remove("lightbox-active");
-        lightboxThumbnailTwo.classList.remove("lightbox-active");
-        lightboxThumbnailThree.classList.remove("lightbox-active");
-        lightboxThumbnailFour.classList.add("lightbox-active");
-        lightboxProductImage.src = "images/image-product-4.jpg";
-      });
+lightboxThumbnailThree.addEventListener("click", function () {
+  if (checkScreenSize()) {
+    lightboxThumbnailOne.classList.remove("lightbox-active");
+    lightboxThumbnailTwo.classList.remove("lightbox-active");
+    lightboxThumbnailThree.classList.add("lightbox-active");
+    lightboxThumbnailFour.classList.remove("lightbox-active");
+    lightboxProductImage.src = "images/image-product-3.jpg";
+  }
+});
 
-      lightboxPrevSymbol.addEventListener("click", function () {
-        if (
-          lightboxProductImage.getAttribute("src") ===
-          "images/image-product-1.jpg"
-        ) {
-          lightboxProductImage.src = "images/image-product-4.jpg";
-          lightboxThumbnailOne.classList.remove("lightbox-active");
-          lightboxThumbnailFour.classList.add("lightbox-active");
-        } else if (
-          lightboxProductImage.getAttribute("src") ===
-          "images/image-product-2.jpg"
-        ) {
-          lightboxProductImage.src = "images/image-product-1.jpg";
-          lightboxThumbnailTwo.classList.remove("lightbox-active");
-          lightboxThumbnailOne.classList.add("lightbox-active");
-        } else if (
-          lightboxProductImage.getAttribute("src") ===
-          "images/image-product-3.jpg"
-        ) {
-          lightboxProductImage.src = "images/image-product-2.jpg";
-          lightboxThumbnailThree.classList.remove("lightbox-active");
-          lightboxThumbnailTwo.classList.add("lightbox-active");
-        } else if (
-          lightboxProductImage.getAttribute("src") ===
-          "images/image-product-4.jpg"
-        ) {
-          lightboxProductImage.src = "images/image-product-3.jpg";
-          lightboxThumbnailFour.classList.remove("lightbox-active");
-          lightboxThumbnailThree.classList.add("lightbox-active");
-        }
-      });
+lightboxThumbnailFour.addEventListener("click", function () {
+  if (checkScreenSize()) {
+    lightboxThumbnailOne.classList.remove("lightbox-active");
+    lightboxThumbnailTwo.classList.remove("lightbox-active");
+    lightboxThumbnailThree.classList.remove("lightbox-active");
+    lightboxThumbnailFour.classList.add("lightbox-active");
+    lightboxProductImage.src = "images/image-product-4.jpg";
+  }
+});
 
-      lightboxNextSymbol.addEventListener("click", function () {
-        if (
-          lightboxProductImage.getAttribute("src") ===
-          "images/image-product-1.jpg"
-        ) {
-          lightboxProductImage.src = "images/image-product-2.jpg";
-          lightboxThumbnailOne.classList.remove("lightbox-active");
-          lightboxThumbnailTwo.classList.add("lightbox-active");
-        } else if (
-          lightboxProductImage.getAttribute("src") ===
-          "images/image-product-2.jpg"
-        ) {
-          lightboxProductImage.src = "images/image-product-3.jpg";
-          lightboxThumbnailTwo.classList.remove("lightbox-active");
-          lightboxThumbnailThree.classList.add("lightbox-active");
-        } else if (
-          lightboxProductImage.getAttribute("src") ===
-          "images/image-product-3.jpg"
-        ) {
-          lightboxProductImage.src = "images/image-product-4.jpg";
-          lightboxThumbnailThree.classList.remove("lightbox-active");
-          lightboxThumbnailFour.classList.add("lightbox-active");
-        } else if (
-          lightboxProductImage.getAttribute("src") ===
-          "images/image-product-4.jpg"
-        ) {
-          lightboxProductImage.src = "images/image-product-1.jpg";
-          lightboxThumbnailFour.classList.remove("lightbox-active");
-          lightboxThumbnailOne.classList.add("lightbox-active");
-        }
-      });
-
-      closeLightbox.addEventListener("click", function () {
-        document.querySelector(".lightbox").style.display = "none";
-        document.body.classList.remove("overlay");
-      });
-    } else {
-      productImage.removeEventListener("click", enableLightbox);
+lightboxPrevSymbol.addEventListener("click", function () {
+  if (checkScreenSize()) {
+    if (
+      lightboxProductImage.getAttribute("src") === "images/image-product-1.jpg"
+    ) {
+      lightboxProductImage.src = "images/image-product-4.jpg";
+      lightboxThumbnailOne.classList.remove("lightbox-active");
+      lightboxThumbnailFour.classList.add("lightbox-active");
+    } else if (
+      lightboxProductImage.getAttribute("src") === "images/image-product-2.jpg"
+    ) {
+      lightboxProductImage.src = "images/image-product-1.jpg";
+      lightboxThumbnailTwo.classList.remove("lightbox-active");
+      lightboxThumbnailOne.classList.add("lightbox-active");
+    } else if (
+      lightboxProductImage.getAttribute("src") === "images/image-product-3.jpg"
+    ) {
+      lightboxProductImage.src = "images/image-product-2.jpg";
+      lightboxThumbnailThree.classList.remove("lightbox-active");
+      lightboxThumbnailTwo.classList.add("lightbox-active");
+    } else if (
+      lightboxProductImage.getAttribute("src") === "images/image-product-4.jpg"
+    ) {
+      lightboxProductImage.src = "images/image-product-3.jpg";
+      lightboxThumbnailFour.classList.remove("lightbox-active");
+      lightboxThumbnailThree.classList.add("lightbox-active");
     }
   }
-  mediaQuery.onchange = onMediaQueryChange;
-  onMediaQueryChange();
-}
+});
+
+lightboxNextSymbol.addEventListener("click", function () {
+  if (checkScreenSize()) {
+    if (
+      lightboxProductImage.getAttribute("src") === "images/image-product-1.jpg"
+    ) {
+      lightboxProductImage.src = "images/image-product-2.jpg";
+      lightboxThumbnailOne.classList.remove("lightbox-active");
+      lightboxThumbnailTwo.classList.add("lightbox-active");
+    } else if (
+      lightboxProductImage.getAttribute("src") === "images/image-product-2.jpg"
+    ) {
+      lightboxProductImage.src = "images/image-product-3.jpg";
+      lightboxThumbnailTwo.classList.remove("lightbox-active");
+      lightboxThumbnailThree.classList.add("lightbox-active");
+    } else if (
+      lightboxProductImage.getAttribute("src") === "images/image-product-3.jpg"
+    ) {
+      lightboxProductImage.src = "images/image-product-4.jpg";
+      lightboxThumbnailThree.classList.remove("lightbox-active");
+      lightboxThumbnailFour.classList.add("lightbox-active");
+    } else if (
+      lightboxProductImage.getAttribute("src") === "images/image-product-4.jpg"
+    ) {
+      lightboxProductImage.src = "images/image-product-1.jpg";
+      lightboxThumbnailFour.classList.remove("lightbox-active");
+      lightboxThumbnailOne.classList.add("lightbox-active");
+    }
+  }
+});
+
+closeLightbox.addEventListener("click", function () {
+  if (checkScreenSize()) {
+    document.querySelector(".lightbox").style.display = "none";
+    document.body.classList.remove("overlay");
+  }
+});
