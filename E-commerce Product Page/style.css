@@ -433,7 +433,101 @@ nav {
   display: none;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
+  #product-img {
+    border-radius: 10px;
+    width: 40rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-links {
+    width: 40%;
+  }
+
+  .product-image-container .previous-symbol {
+    cursor: pointer;
+    position: absolute;
+    background: url(images/icon-previous.svg) no-repeat center, var(--white);
+    background-size: 0.6rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 0;
+    left: 0;
+    right: 33.5rem;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .product-image-container .previous-symbol:hover {
+    cursor: pointer;
+    position: absolute;
+    background: url(images/icon-previous-orange.svg) no-repeat center,
+      var(--white);
+    background-size: 0.6rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 0;
+    left: 0;
+    right: 33.5rem;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .cart-container {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    width: 47.5%;
+    background: var(--white);
+    top: 12.5%;
+    right: 2.5rem;
+    padding: 2rem;
+    margin: 0;
+    box-shadow: 0px 10px 30px -10px var(--black);
+  }
+
+  .product-image-container .next-symbol {
+    cursor: pointer;
+    position: absolute;
+    background: url(images/icon-next.svg) no-repeat center, var(--white);
+    background-size: 0.6rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 0;
+    left: 33.5rem;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .product-image-container .next-symbol:hover {
+    cursor: pointer;
+    position: absolute;
+    background: url(images/icon-next-orange.svg) no-repeat center, var(--white);
+    background-size: 0.6rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 0;
+    left: 33.5rem;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .product-text {
+    display: block;
+    margin: 0 auto;
+    width: 35rem;
+  }
+}
+
+@media (min-width: 1200px) {
   nav {
     position: relative;
     padding: 2rem 10rem;
@@ -518,7 +612,7 @@ nav {
   }
 
   main {
-    padding: 5rem 15rem 5rem 15rem;
+    padding: 5rem 10rem 5rem 10rem;
   }
 
   #product-img {
@@ -603,7 +697,7 @@ nav {
     display: none;
     position: absolute;
     z-index: 999;
-    width: 25%;
+    width: 30%;
     background: var(--white);
     top: 16%;
     right: 10rem;
@@ -772,5 +866,11 @@ nav {
     height: 1.339286rem;
     background-repeat: no-repeat;
     background-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  main {
+    padding: 5rem 15rem 5rem 15rem;
   }
 }
