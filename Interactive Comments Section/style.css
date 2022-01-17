@@ -1,0 +1,594 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  /* Primary Colours */
+  --moderateBlue: hsl(238, 40%, 52%);
+  --softRed: hsl(358, 79%, 66%);
+  --lightGreyishBlue: hsl(239, 57%, 85%);
+  --paleRed: hsl(357, 100%, 86%);
+
+  /* Neutral Colours */
+  --darkBlue: hsl(212, 24%, 26%);
+  --grayishBlue: hsl(211, 10%, 45%);
+  --lightGrey: hsl(223, 19%, 93%);
+  --veryLightGrey: hsl(228, 33%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--veryLightGrey);
+  line-height: 1.5;
+}
+
+main {
+  margin: 2rem 1rem;
+}
+
+.comment-container {
+  display: flex;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  transition: all 1.5s ease;
+  transform: translateX(-1200px);
+}
+
+.comment-container-part-2 {
+  min-width: 100%;
+}
+
+.comment-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.comment-header-part-1 {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.avatar-amy-robson {
+  background-image: url(images/avatars/image-amyrobson.png);
+  width: 2rem;
+  height: 2rem;
+  background-size: 2rem;
+}
+
+.username {
+  font-weight: 500;
+  color: var(--darkBlue);
+}
+
+.time-posted {
+  color: var(--grayishBlue);
+}
+
+.comment-content {
+  color: var(--grayishBlue);
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+}
+
+.vote-and-icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vote-container {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  background-color: var(--veryLightGrey);
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+}
+
+.vote-container-desktop {
+  display: none;
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--veryLightGrey);
+  padding: 0.75rem 0.6rem;
+  border-radius: 5px;
+}
+
+.plus-icon {
+  cursor: pointer;
+  background-image: url(images/icon-plus.svg);
+  width: 0.6875rem;
+  height: 0.6875rem;
+}
+
+.plus-icon:hover {
+  cursor: pointer;
+  background-image: url(images/icon-plus-hover.svg);
+  width: 0.6875rem;
+  height: 0.6875rem;
+}
+
+.votes {
+  font-weight: 500;
+  color: var(--moderateBlue);
+}
+
+.minus-icon {
+  cursor: pointer;
+  background-image: url(images/icon-minus.svg);
+  width: 0.6875rem;
+  height: 0.1875rem;
+}
+
+.minus-icon:hover {
+  cursor: pointer;
+  background-image: url(images/icon-minus-hover.svg);
+  width: 0.6875rem;
+  height: 0.1875rem;
+}
+
+.reply-icon-container {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.reply-icon-container-desktop {
+  cursor: pointer;
+  display: none;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.delete-and-edit-icons-container-desktop {
+  display: none;
+  gap: 1rem;
+}
+
+.reply-icon-container:hover,
+.reply-icon-container-desktop:hover {
+  opacity: 0.5;
+}
+
+.reply-icon {
+  background-image: url(images/icon-reply.svg);
+  width: 0.875rem;
+  height: 0.8125rem;
+}
+
+.reply-text {
+  font-weight: 500;
+  color: var(--moderateBlue);
+}
+
+.replies-container {
+  border-left: 3px solid var(--lightGrey);
+  transition: all 1.5s ease;
+  transform: translateX(-1200px);
+  transition-delay: 1.5s;
+}
+
+.reply {
+  margin-left: 1rem;
+}
+
+.at-the-rate-of {
+  color: var(--moderateBlue);
+  font-weight: 500;
+}
+
+.avatar-max-blagun {
+  background-image: url(images/avatars/image-maxblagun.png);
+  width: 2rem;
+  height: 2rem;
+  background-size: 2rem;
+}
+
+.avatar-ramses-miron {
+  background-image: url(images/avatars/image-ramsesmiron.png);
+  width: 2rem;
+  height: 2rem;
+  background-size: 2rem;
+}
+
+.avatar-julius-omo {
+  background-image: url(images/avatars/image-juliusomo.png);
+  width: 2rem;
+  height: 2rem;
+  background-size: 2rem;
+}
+
+.you {
+  background-color: var(--moderateBlue);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.1rem 0.5rem;
+  border-radius: 2px;
+}
+
+.delete-and-edit-icons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.delete-icon-container {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.delete-icon {
+  background-image: url(images/icon-delete.svg);
+  width: 0.75rem;
+  height: 0.875rem;
+}
+
+.delete-text {
+  color: var(--softRed);
+  font-weight: 500;
+}
+
+.edit-icon-container {
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.edit-icon {
+  background-image: url(images/icon-edit.svg);
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.edit-text {
+  color: var(--moderateBlue);
+  font-weight: 500;
+}
+
+.delete-icon-container:hover,
+.edit-icon-container:hover {
+  opacity: 0.5;
+}
+
+.add-a-comment-container {
+  background-color: var(--white);
+  padding: 1rem;
+  transition: all 1.5s ease;
+  transform: translateX(-1200px);
+  transition-delay: 1.5s;
+}
+
+.reply-container {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.reply-container.ramses-miron {
+  margin-left: 1rem;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1rem 0.9rem 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--lightGrey);
+  line-height: 1.5;
+}
+
+textarea:focus {
+  outline: none !important;
+  border: 2px solid var(--moderateBlue);
+}
+
+.avatar-and-send-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.avatar-and-reply-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.send-btn {
+  cursor: pointer;
+  background-color: var(--moderateBlue);
+  border: none;
+  padding: 1rem 2rem;
+  font-family: "Rubik", sans-serif;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.send-btn:hover {
+  opacity: 0.5;
+}
+
+.update-btn {
+  cursor: pointer;
+  background-color: var(--moderateBlue);
+  border: none;
+  padding: 1rem 2rem;
+  font-family: "Rubik", sans-serif;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.update-btn:hover {
+  opacity: 0.5;
+}
+
+.reply-btn {
+  cursor: pointer;
+  background-color: var(--moderateBlue);
+  border: none;
+  padding: 1rem 2rem;
+  font-family: "Rubik", sans-serif;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.reply-btn:hover {
+  opacity: 0.5;
+}
+
+.overlay::before {
+  content: "";
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  background-color: var(--white);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  width: calc(100% - 2rem);
+}
+
+.delete-comment-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--darkBlue);
+}
+
+.modal-body {
+  margin: 0.5rem 0 1rem 0;
+  color: var(--grayishBlue);
+}
+
+.modal-buttons button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-family: "Rubik", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  color: var(--white);
+  width: calc(50% - 0.5rem);
+  font-weight: 500;
+}
+
+.modal-buttons button:hover {
+  opacity: 0.5;
+}
+
+.cancel-btn {
+  background-color: var(--grayishBlue);
+  margin-right: 0.5rem;
+}
+
+.delete-btn {
+  background-color: var(--softRed);
+}
+
+@media (min-width: 600px) {
+  main {
+    margin: 2rem 5rem 2rem 5rem;
+  }
+
+  .delete-modal {
+    width: calc(100% - 15rem);
+  }
+}
+
+@media (min-width: 750px) {
+  main {
+    margin: 5rem 7.5rem 5rem 7.5rem;
+  }
+
+  .delete-modal {
+    width: calc(100% - 25rem);
+  }
+}
+
+@media (min-width: 800px) {
+  main {
+    margin: 5rem 10rem 5rem 10rem;
+  }
+
+  .delete-modal {
+    width: calc(100% - 30rem);
+  }
+}
+
+@media (min-width: 1000px) {
+  main {
+    margin: 5rem 10rem 5rem 10rem;
+  }
+
+  .delete-modal {
+    width: calc(100% - 37.5rem);
+  }
+
+  .comment-container {
+    display: flex;
+    gap: 1.5rem;
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .comment-container-part-2 {
+    min-width: 92%;
+  }
+
+  .replies-container .comment-container-part-2 {
+    min-width: 90.582%;
+  }
+
+  .comment-content {
+    margin: 0;
+  }
+
+  .vote-container {
+    display: none;
+  }
+
+  .reply-icon-container {
+    display: none;
+  }
+
+  .reply {
+    margin-left: 2.5rem;
+  }
+
+  .replies-container {
+    margin-left: 2.5rem;
+    border-left: 3px solid var(--lightGrey);
+  }
+
+  .delete-and-edit-icons-container {
+    display: none;
+  }
+
+  .vote-container-desktop {
+    display: flex;
+  }
+
+  .reply-icon-container-desktop {
+    display: flex;
+  }
+
+  .delete-and-edit-icons-container-desktop {
+    display: flex;
+  }
+
+  .add-a-comment-container .avatar-julius-omo {
+    display: none;
+  }
+
+  .add-a-comment-container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .reply-container .avatar-julius-omo {
+    display: none;
+  }
+
+  .reply-container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .reply-container.ramses-miron {
+    margin-left: 2.5rem;
+  }
+
+  .avatar-julius-omo-desktop {
+    background-image: url(images/avatars/image-juliusomo.png);
+    width: 2.7625rem;
+    height: 2rem;
+    background-size: 2rem;
+    background-repeat: no-repeat;
+  }
+
+  .avatar-and-send-container {
+    margin: 0;
+  }
+
+  .avatar-and-reply-container {
+    margin: 0;
+  }
+
+  .send-btn {
+    align-self: flex-start;
+  }
+
+  .reply-btn {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1115px) {
+  main {
+    margin: 5rem 15rem 5rem 15rem;
+  }
+
+  .delete-modal {
+    width: calc(100% - 45rem);
+  }
+}
+
+@media (min-width: 1275px) {
+  main {
+    margin: 5rem 20rem 5rem 20rem;
+  }
+
+  .delete-modal {
+    width: calc(100% - 55rem);
+  }
+}
+
+@media (min-width: 1440px) {
+  main {
+    margin: 5rem 25rem 5rem 25rem;
+  }
+
+  .delete-modal {
+    width: calc(100% - 67.5rem);
+  }
+}
