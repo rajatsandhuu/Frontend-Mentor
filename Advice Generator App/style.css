@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  /* Primary Colours */
+  --lightCyan: hsl(193, 38%, 86%);
+  --neonGreen: hsl(150, 100%, 66%);
+
+  /* Neutral Colours */
+  --greyishBlue: rgb(49, 58, 73);
+  --darkGreyishBlue: rgb(32, 38, 50);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  padding: 0 1rem 0 1rem;
+  background-color: var(--darkGreyishBlue);
+}
+
+.quote-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--greyishBlue);
+  margin-top: 7.5rem;
+  padding: 3rem 2rem 5rem 2rem;
+  border-radius: 10px;
+}
+
+.quote-container div:nth-child(1) {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: var(--neonGreen);
+  letter-spacing: 5px;
+  transition: all 0.2s ease;
+}
+
+.quote-container div:nth-child(2) {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--lightCyan);
+  transition: all 0.2s ease;
+}
+
+.dice {
+  cursor: pointer;
+  position: absolute;
+  background-image: url("images/icon-dice.svg");
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--neonGreen);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 50%;
+  bottom: -2rem;
+  -webkit-transition: box-shadow 0.25s ease;
+  -moz-transition: box-shadow 0.25s ease;
+  -ms-transition: box-shadow 0.25s ease;
+  -o-transition: box-shadow 0.25s ease;
+  transition: box-shadow 0.25s ease;
+}
+
+.divider {
+  background-image: url(images/pattern-divider-mobile.svg);
+  width: 18.4375rem;
+  height: 1rem;
+}
+
+.dice:hover {
+  box-shadow: 0 0 20px 5px var(--neonGreen);
+}
+
+.hide {
+  opacity: 0;
+}
+
+@media (min-width: 600px) {
+  body {
+    padding: 7.5rem 10% 0 10%;
+  }
+
+  .quote-container {
+    margin: 0;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    padding: 12.5% 20% 0 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 12.5% 32.5% 0 32.5%;
+  }
+}
+
+@media (min-width: 1350px) {
+  .divider {
+    background-image: url(images/pattern-divider-desktop.svg);
+    width: 27.75rem;
+    height: 1rem;
+  }
+}
