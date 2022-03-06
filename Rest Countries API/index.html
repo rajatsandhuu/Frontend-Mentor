@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rest Countries API</title>
+  </head>
+  <body class="dark-mode">
+    <header class="header dark-mode-elements">
+      <div class="header-title">Where in the world?</div>
+      <div class="mode-toggler">
+        <ion-icon name="moon-outline"></ion-icon
+        ><span class="mode-text">Dark Mode</span>
+      </div>
+    </header>
+    <main class="main">
+      <section class="home-page">
+        <div class="search-bar-and-filter-by-region">
+          <div id="search-bar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg
+            ><input
+              type="text"
+              name="search-bar"
+              placeholder="Search for a country..."
+              class="country-search-bar dark-mode-elements"
+            />
+          </div>
+          <select
+            name="filter-by-region"
+            id="region-select"
+            class="dark-mode-elements"
+          >
+            <option value="" selected disabled hidden>Filter by Region</option>
+            <option value="Africa">Africa</option>
+            <option value="America">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </div>
+        <div class="countries-list"></div>
+      </section>
+      <section class="country-in-detail">
+        <div class="back-btn">
+          <ion-icon name="arrow-back-outline"></ion-icon>Back
+        </div>
+        <div class="country-flex-items">
+          <img
+            src="https://flagcdn.com/w320/me.png"
+            class="big-flag"
+            alt="Country Flag"
+          />
+          <div class="country-flex-details">
+            <div class="name-of-country"></div>
+            <div class="country-flex-in-detail">
+              <div class="country-flex-left">
+                <div class="native-name-container">
+                  <span class="header-text">Native Name: </span>
+                  <span class="native-name"></span>
+                </div>
+                <div class="population-of-country-container">
+                  <span class="header-text">Population: </span>
+                  <span class="population-of-country"></span>
+                </div>
+                <div class="region-of-country-container">
+                  <span class="header-text">Region: </span>
+                  <span class="region-of-country"></span>
+                </div>
+                <div class="sub-region-container">
+                  <span class="header-text">Sub Region: </span>
+                  <span class="sub-region"></span>
+                </div>
+                <div class="capital-of-country-container">
+                  <span class="header-text">Capital: </span>
+                  <span class="capital-of-country"></span>
+                </div>
+              </div>
+              <div class="country-flex-right">
+                <div class="top-level-domain-container">
+                  <span class="header-text">Top Level Domain: </span>
+                  <span class="top-level-domain"></span>
+                </div>
+                <div class="currencies-container">
+                  <span class="header-text">Currencies: </span>
+                  <span class="currencies"></span>
+                </div>
+                <div class="languages-container">
+                  <span class="header-text">Languages: </span>
+                  <span class="languages"></span>
+                </div>
+              </div>
+            </div>
+            <div class="border-countries-container">
+              <div class="border-countries-text">Border Countries:</div>
+              <div class="border-countries"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
