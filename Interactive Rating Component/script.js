@@ -5,6 +5,7 @@ const fourRating = document.querySelector('.four-rating');
 const fiveRating = document.querySelector('.five-rating');
 const submitBtn = document.querySelector('.submit-btn');
 oneRating.addEventListener('click', () => {
+  submitBtn.removeAttribute('disabled');
   if (!oneRating.classList.contains('active')) {
     oneRating.classList.add('active');
     twoRating.classList.remove('active');
@@ -14,6 +15,7 @@ oneRating.addEventListener('click', () => {
   }
 });
 twoRating.addEventListener('click', () => {
+  submitBtn.removeAttribute('disabled');
   if (!twoRating.classList.contains('active')) {
     oneRating.classList.remove('active');
     twoRating.classList.add('active');
@@ -23,6 +25,7 @@ twoRating.addEventListener('click', () => {
   }
 });
 threeRating.addEventListener('click', () => {
+  submitBtn.removeAttribute('disabled');
   if (!threeRating.classList.contains('active')) {
     oneRating.classList.remove('active');
     twoRating.classList.remove('active');
@@ -32,6 +35,7 @@ threeRating.addEventListener('click', () => {
   }
 });
 fourRating.addEventListener('click', () => {
+  submitBtn.removeAttribute('disabled');
   if (!fourRating.classList.contains('active')) {
     oneRating.classList.remove('active');
     twoRating.classList.remove('active');
@@ -41,6 +45,7 @@ fourRating.addEventListener('click', () => {
   }
 });
 fiveRating.addEventListener('click', () => {
+  submitBtn.removeAttribute('disabled');
   if (!fiveRating.classList.contains('active')) {
     oneRating.classList.remove('active');
     twoRating.classList.remove('active');
