@@ -107,7 +107,12 @@ body {
   transition: all 0.3s ease;
 }
 
-.submit-btn:hover {
+.submit-btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.submit-btn:not(:disabled):hover {
   background-color: var(--white);
   color: var(--orange);
 }
