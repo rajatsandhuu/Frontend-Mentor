@@ -6,6 +6,8 @@ const countryDetailsSection = document.querySelector('.country-in-detail');
 const backBtn = document.querySelector('.back-btn');
 const darkModeBtn = document.querySelector('.mode-toggler');
 dropdown.addEventListener('change', function () {
+  document.querySelector(`ion-icon[name="close-outline"]`).style.display =
+    'none';
   searchBar.value = '';
   const countries = document.querySelectorAll('.country-container');
   const selectedOption = dropdown.options[dropdown.selectedIndex].text;
