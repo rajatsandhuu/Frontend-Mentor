@@ -38,6 +38,7 @@
               placeholder="Search for a country..."
               class="country-search-bar dark-mode-elements"
             />
+            <ion-icon name="close-outline"></ion-icon>
           </div>
           <select
             name="filter-by-region"
@@ -45,12 +46,18 @@
             class="dark-mode-elements"
           >
             <option value="" selected disabled hidden>Filter by Region</option>
+            <option value="All Regions">All Regions</option>
             <option value="Africa">Africa</option>
             <option value="America">Americas</option>
             <option value="Asia">Asia</option>
             <option value="Europe">Europe</option>
             <option value="Oceania">Oceania</option>
           </select>
+        </div>
+        <div class="spinner">
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
         <div class="countries-list"></div>
       </section>
