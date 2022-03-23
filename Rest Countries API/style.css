@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
 :root {
   --mainBg: hsl(0, 0%, 100%);
@@ -8,9 +8,10 @@
   --inputColour: hsl(0, 0%, 52%);
   --placeholderColour: hsl(0, 0%, 52%);
   --boxShadowColour: hsl(0, 0%, 80%);
+  --ionIconHoverColour: hsl(0, 0%, 52%);
 }
 
-[data-theme="dark-mode"] {
+[data-theme='dark-mode'] {
   --mainBg: hsl(207, 26%, 17%);
   --headerBg: hsl(209, 23%, 22%);
   --elementBg: hsl(209, 23%, 22%);
@@ -18,6 +19,7 @@
   --inputColour: hsl(0, 0%, 100%);
   --placeholderColour: hsla(0, 0%, 100%, 0.5);
   --boxShadowColour: hsla(0, 0%, 0%, 0.25);
+  --ionIconHoverColour: rgb(0, 255, 255);
 }
 
 * {
@@ -27,9 +29,44 @@
 }
 
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   background-color: var(--mainBg);
   color: var(--textColour);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.spinner {
+  display: block;
+  position: relative;
+  float: none;
+  width: 80px;
+  height: 80px;
+  margin: 3rem auto 0 auto;
+}
+
+.spinner div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid var(--textColour);
+  border-radius: 50%;
+  animation: spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--textColour) transparent transparent transparent;
+}
+
+.spinner div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.spinner div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.spinner div:nth-child(3) {
+  animation-delay: -0.15s;
 }
 
 .header {
@@ -39,6 +76,7 @@ body {
   padding: 2rem 1rem 2rem 1rem;
   box-shadow: 0 0 5px 2px var(--boxShadowColour);
   background-color: var(--headerBg);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header-title {
@@ -52,13 +90,28 @@ body {
   font-weight: 600;
 }
 
-ion-icon[name="moon-outline"],
-ion-icon[name="sunny-outline"] {
+ion-icon[name='moon-outline'],
+ion-icon[name='sunny-outline'] {
   margin-right: 0.75rem;
 }
 
-ion-icon[name="sunny-outline"] {
+ion-icon[name='sunny-outline'] {
   font-size: 1.2rem;
+}
+
+ion-icon[name='close-outline'] {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 2.5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ion-icon[name='close-outline']:hover {
+  color: var(--ionIconHoverColour);
+  transition: color 0.3s ease;
 }
 
 .home-page {
@@ -66,7 +119,7 @@ ion-icon[name="sunny-outline"] {
 }
 
 input {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   width: 100%;
   padding: 0.75rem 1rem 0.75rem 5rem;
   box-shadow: 0 0 10px 2px var(--boxShadowColour);
@@ -93,7 +146,7 @@ svg {
 
 select {
   cursor: pointer;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   width: 50%;
   border: none;
   outline: none;
@@ -119,12 +172,20 @@ select {
   width: 20rem;
   border-radius: 5px;
   background-color: var(--elementBg);
+  transition: transform 0.3s ease;
+}
+
+.country-container:hover {
+  transform: scale(1.05);
 }
 
 .flag {
+  width: 20rem;
+  height: 13.3125rem;
   display: block;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  object-fit: cover;
 }
 
 .country-name {
@@ -164,7 +225,14 @@ select {
   font-weight: 600;
   width: fit-content;
   padding: 0.5rem 2rem;
+  color: var(--textColour);
   background-color: var(--elementBg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: var(--elementBg);
+  background-color: var(--textColour);
 }
 
 .big-flag {
@@ -207,9 +275,23 @@ select {
 }
 
 .border-countries div {
+  cursor: pointer;
   box-shadow: 0 0 10px 2px var(--boxShadowColour);
   padding: 0.5rem 1.75rem;
   background-color: var(--elementBg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.border-countries div:hover {
+  background-color: var(--textColour);
+  color: var(--elementBg);
+}
+
+.no-results {
+  font-size: 1.25rem;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 @media (min-width: 750px) {
@@ -223,6 +305,10 @@ select {
 
   .countries-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  ion-icon[name='close-outline'] {
+    right: 51.5%;
   }
 }
 
@@ -288,6 +374,14 @@ select {
   .country-in-detail {
     padding: 3rem 3rem 5rem 3rem;
   }
+
+  .no-results {
+    font-size: 1.5rem;
+  }
+
+  ion-icon[name='close-outline'] {
+    right: -80%;
+  }
 }
 
 @media (min-width: 1500px) {
@@ -298,5 +392,15 @@ select {
 
   .countries-list {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
