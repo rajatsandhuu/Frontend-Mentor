@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Interactive Pricing Component</title>
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <h1>Simple, traffic-based pricing</h1>
+        <div class="thirty-day-trial">Sign-up for our 30-day trial.</div>
+        <span class="no-credit-card">No credit card required.</span>
+      </div>
+      <div class="pricing-component">
+        <div class="pricing-flex-container">
+          <div class="page-view-container">
+            <span class="page-views">100K</span> PAGEVIEWS
+          </div>
+          <input type="range" min="1" max="5" class="slider" value="3" />
+          <div class="bill-per-month">
+            <span class="bill">$16.00</span>
+            <span class="per-month">/ month</span>
+          </div>
+        </div>
+        <div class="billing-container">
+          <div class="monthly-billing">
+            <div class="monthly-billing-text">Monthly Billing</div>
+            <label class="monthly-switch">
+              <input type="checkbox" class="check-box" />
+              <span class="monthly-slider"></span>
+            </label>
+          </div>
+          <div class="yearly-billing">
+            <div class="yearly-billing-text">Yearly Billing</div>
+            <div class="discount">
+              <span class="minus">-</span>25%
+              <span class="discount-text">discount</span>
+            </div>
+          </div>
+        </div>
+        <div class="features-and-trail-btn">
+          <div class="features-container">
+            <div class="feature">
+              <div class="checkmark"></div>
+              Unlimited websites
+            </div>
+            <div class="feature">
+              <div class="checkmark"></div>
+              100% data ownership
+            </div>
+            <div class="feature">
+              <div class="checkmark"></div>
+              Email reports
+            </div>
+          </div>
+          <button class="trial-btn">Start my trial</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
