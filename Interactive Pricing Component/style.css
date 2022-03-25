@@ -81,21 +81,50 @@ input[type='range']::-webkit-slider-thumb {
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
-  background: var(--sliderBg);
+  background-color: var(--sliderBg);
   margin-top: -20px;
   background-image: url(images/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1.75rem;
   box-shadow: 0 15px 30px -5px var(--sliderBg);
+  transition: background-color 0.3s ease;
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+  background-color: var(--sliderHover);
+}
+
+input[type='range']::-moz-range-track {
+  width: 100%;
+  height: 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type='range']::-moz-range-thumb {
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: none;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: var(--sliderBg);
+  margin-top: -20px;
+  background-image: url(images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.75rem;
+  box-shadow: 0 15px 30px -5px var(--sliderBg);
+  transition: background-color 0.3s ease;
+}
+
+input[type='range']::-moz-range-thumb:hover {
+  background-color: var(--sliderHover);
 }
 
 input[type='range']:focus {
   outline: none;
-}
-
-input[type='range']::-webkit-fill-upper {
-  background-color: red;
 }
 
 .page-view-container {
@@ -192,9 +221,9 @@ input:checked + .monthly-slider {
 }
 
 input:checked + .monthly-slider::before {
-  -webkit-transform: translateX(27px);
-  -ms-transform: translateX(27px);
-  transform: translateX(27px);
+  -webkit-transform: translateX(11px);
+  -ms-transform: translateX(11px);
+  transform: translateX(11px);
 }
 
 .minus {
@@ -253,9 +282,23 @@ input:checked + .monthly-slider::before {
   color: var(--trialBtnBg);
 }
 
+@media (min-width: 375px) {
+  input:checked + .monthly-slider::before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+  }
+}
+
 @media (min-width: 425px) {
   .pricing-component {
     width: 25rem;
+  }
+
+  input:checked + .monthly-slider::before {
+    -webkit-transform: translateX(27px);
+    -ms-transform: translateX(27px);
+    transform: translateX(27px);
   }
 }
 
