@@ -216,10 +216,6 @@ input[type='range']:focus {
   background-color: var(--sliderBg);
 }
 
-input:checked + .monthly-slider {
-  background-color: var(--sliderHover);
-}
-
 input:checked + .monthly-slider::before {
   -webkit-transform: translateX(11px);
   -ms-transform: translateX(11px);
