@@ -23,8 +23,35 @@ iconClose.addEventListener('click', () => {
   document.body.classList.remove('overlay');
 });
 
+//Helper function for generating a random number between 'min' and 'max'
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
+}
+
+//Helper function for detecting a touch screen device
+function hasTouch() {
+  return (
+    'ontouchstart' in document.documentElement ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
+}
+
+if (hasTouch()) {
+  try {
+    for (var si in document.styleSheets) {
+      var styleSheet = document.styleSheets[si];
+      if (!styleSheet.cssRules) continue;
+
+      for (var ri = styleSheet.cssRules.length - 1; ri >= 0; ri--) {
+        if (!styleSheet.cssRules[ri].selectorText) continue;
+
+        if (styleSheet.cssRules[ri].selectorText.match(':hover')) {
+          styleSheet.deleteRule(ri);
+        }
+      }
+    }
+  } catch (ex) {}
 }
 
 icons.forEach(i => {
