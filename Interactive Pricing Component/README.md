@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/rajatsinghsandhu/Frontend-Mentor/tree/main/Interactive%20Pricing%20Component)
-- Live Site URL: [Interactive Pricing Component](https://rajatsinghsandhu.github.io/Frontend-Mentor/Interactive%20Pricing%20Component)
+- Solution URL: [Solution](https://github.com/rajatsandhuu/Frontend-Mentor/tree/main/Interactive%20Pricing%20Component)
+- Live Site URL: [Interactive Pricing Component](https://rajatsandhuu.github.io/Frontend-Mentor/Interactive%20Pricing%20Component)
 
 ## My process
 
