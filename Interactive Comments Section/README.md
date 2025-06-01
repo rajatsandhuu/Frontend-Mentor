@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/rajatsinghsandhu/Frontend-Mentor/tree/main/Interactive%20Comments%20Section)
-- Live Site URL: [Interactive Comments Section](https://rajatsinghsandhu.github.io/Frontend-Mentor/Interactive%20Comments%20Section)
+- Solution URL: [Solution](https://github.com/rajatsandhuu/Frontend-Mentor/tree/main/Interactive%20Comments%20Section)
+- Live Site URL: [Interactive Comments Section](https://rajatsandhuu.github.io/Frontend-Mentor/Interactive%20Comments%20Section)
 
 ## My process
 
