@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/rajatsinghsandhu/Frontend-Mentor/tree/main/Space%20Tourism%20Website)
-- Live Site URL: [Space Tourism Website](https://rajatsinghsandhu.github.io/Frontend-Mentor/Space%20Tourism%20Website)
+- Solution URL: [Solution](https://github.com/rajatsandhuu/Frontend-Mentor/tree/main/Space%20Tourism%20Website)
+- Live Site URL: [Space Tourism Website](https://rajatsandhuu.github.io/Frontend-Mentor/Space%20Tourism%20Website)
 
 ## My process
 
