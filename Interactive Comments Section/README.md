@@ -41,5 +41,5 @@ Users should be able to:
 
 ## Author
 
-- Github Profile - [Rajat](https://github.com/rajatsinghsandhu)
+- Github Profile - [Rajat](https://github.com/rajatsandhuu)
 - Frontend Mentor - [@rajatsinghsandhu](https://www.frontendmentor.io/profile/rajatsinghsandhu)
