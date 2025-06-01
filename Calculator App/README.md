@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/rajatsinghsandhu/Frontend-Mentor/tree/main/Calculator%20App)
-- Live Site URL: [Calculator App](https://rajatsinghsandhu.github.io/Frontend-Mentor/Calculator%20App)
+- Solution URL: [Solution](https://github.com/rajatsandhuu/Frontend-Mentor/tree/main/Calculator%20App)
+- Live Site URL: [Calculator App](https://rajatsandhuu.github.io/Frontend-Mentor/Calculator%20App)
 
 ## My process
 
