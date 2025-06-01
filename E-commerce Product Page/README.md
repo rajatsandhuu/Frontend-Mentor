@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/rajatsinghsandhu/Frontend-Mentor/tree/main/E-commerce%20Product%20Page)
-- Live Site URL: [E-commerce Product Page](https://rajatsinghsandhu.github.io/Frontend-Mentor/E-commerce%20Product%20Page)
+- Solution URL: [Solution](https://github.com/rajatsandhuu/Frontend-Mentor/tree/main/E-commerce%20Product%20Page)
+- Live Site URL: [E-commerce Product Page](https://rajatsandhuu.github.io/Frontend-Mentor/E-commerce%20Product%20Page)
 
 ## My process
 
