@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/rajatsinghsandhu/Frontend-Mentor/tree/main/Advice%20Generator%20App)
-- Live Site URL: [Advice Generator App](https://rajatsinghsandhu.github.io/Frontend-Mentor/Advice%20Generator%20App)
+- Solution URL: [Solution](https://github.com/rajatsandhuu/Frontend-Mentor/tree/main/Advice%20Generator%20App)
+- Live Site URL: [Advice Generator App](https://rajatsandhuu.github.io/Frontend-Mentor/Advice%20Generator%20App)
 
 ## My process
 
