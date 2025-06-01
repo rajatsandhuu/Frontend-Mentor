@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/rajatsinghsandhu/Frontend-Mentor/tree/main/Tip%20Calculator%20App)
-- Live Site URL: [Tip Calculator App](https://rajatsinghsandhu.github.io/Frontend-Mentor/Tip%20Calculator%20App)
+- Solution URL: [Solution](https://github.com/rajatsandhuu/Frontend-Mentor/tree/main/Tip%20Calculator%20App)
+- Live Site URL: [Tip Calculator App](https://rajatsandhuu.github.io/Frontend-Mentor/Tip%20Calculator%20App)
 
 ## My process
 
@@ -38,5 +38,5 @@ Users should be able to:
 
 ## Author
 
-- Github Profile - [Rajat](https://github.com/rajatsinghsandhu)
+- Github Profile - [Rajat](https://github.com/rajatsandhuu)
 - Frontend Mentor - [@rajatsinghsandhu](https://www.frontendmentor.io/profile/rajatsinghsandhu)
