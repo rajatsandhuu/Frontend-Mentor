@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/rajatsinghsandhu/Frontend-Mentor/tree/main/Time%20Tracking%20Dashboard)
-- Live Site URL: [Time Tracking Dashboard](https://rajatsinghsandhu.github.io/Frontend-Mentor/Time%20Tracking%20Dashboard)
+- Solution URL: [Solution](https://github.com/rajatsandhuu/Frontend-Mentor/tree/main/Time%20Tracking%20Dashboard)
+- Live Site URL: [Time Tracking Dashboard](https://rajatsandhuu.github.io/Frontend-Mentor/Time%20Tracking%20Dashboard)
 
 ## My process
 
@@ -39,5 +39,5 @@ Users should be able to:
 
 ## Author
 
-- Github Profile - [Rajat](https://github.com/rajatsinghsandhu)
+- Github Profile - [Rajat](https://github.com/rajatsandhuu)
 - Frontend Mentor - [@rajatsinghsandhu](https://www.frontendmentor.io/profile/rajatsinghsandhu)
