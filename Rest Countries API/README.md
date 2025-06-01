@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/rajatsinghsandhu/Frontend-Mentor/tree/main/Rest%20Countries%20API)
-- Live Site URL: [Rest Countries API](https://rajatsinghsandhu.github.io/Frontend-Mentor/Rest%20Countries%20API)
+- Solution URL: [Solution](https://github.com/rajatsandhuu/Frontend-Mentor/tree/main/Rest%20Countries%20API)
+- Live Site URL: [Rest Countries API](https://rajatsandhuu.github.io/Frontend-Mentor/Rest%20Countries%20API)
 
 ## My process
 
