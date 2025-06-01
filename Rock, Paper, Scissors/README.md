@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/rajatsinghsandhu/Frontend-Mentor/tree/main/Rock,%20Paper,%20Scissors)
-- Live Site URL: [Rock, Paper, Scissors](https://rajatsinghsandhu.github.io/Frontend-Mentor/Rock,%20Paper,%20Scissors)
+- Solution URL: [Solution](https://github.com/rajatsandhuu/Frontend-Mentor/tree/main/Rock,%20Paper,%20Scissors)
+- Live Site URL: [Rock, Paper, Scissors](https://rajatsandhuu.github.io/Frontend-Mentor/Rock,%20Paper,%20Scissors)
 
 ## My process
 
